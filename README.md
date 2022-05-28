@@ -4,7 +4,7 @@
 
 <h1>Groww Clone</h1>
  <h2>Landing Page</h2>
-    <img src="ScreenShots/HOMEPAGE.png" alt="">
+    <img src="https://github.com/Parth-Bisht/Team-GROWW/raw/main/ScreenShots/HOMEPAGE.png" alt="">
   <h2>Login Page</h2>
     <img src="ScreenShots/LOGIN_PAGE.png" alt="">
        <h2>Dashboard</h2>
