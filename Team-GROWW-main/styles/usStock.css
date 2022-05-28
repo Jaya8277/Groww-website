@@ -1,0 +1,406 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#main2 {
+    /* visibility: hidden; */
+
+    /* top: 20%; */
+}
+
+.UsStocksContent {
+    position: absolute;
+    /* border:1px solid black; */
+    width: 92%;
+    left: 4%;
+    top: 34%;
+    /* height: auto; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.UsStocksContentLeft {
+
+    width: 65%;
+
+}
+
+.UsStocksContentRight {
+
+    width: 30%;
+}
+
+.UsStocksContentLeft1 {
+    padding: 4%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+.fundYourUsd {
+    display: flex;
+    gap: 2%;
+}
+
+.fundYourUsd h4 {
+    color: #44475b;
+    margin-top: 0;
+}
+
+.UsStocksContentLeft1 {
+    border-radius: 5px;
+}
+
+.UsStocksContentLeft1 p {
+    font-size: 16px !important;
+    color: #44475b !important;
+    margin-top: 20px;
+
+}
+
+.usMarketOpenTime {
+    display: flex;
+    gap: 2%;
+    margin-left: 2%;
+    margin-top: 5%;
+    color: #44475b7d;
+    font-size: small;
+}
+
+.usMarketOpenTime h4 {
+    color: #44475b9b;
+    margin-top: 0;
+}
+
+.TopInMarket {
+    display: flex;
+    gap: 60%;
+    align-items: center;
+    margin-left: 2%;
+    margin-top: 4%;
+}
+
+.TopInMarket h3 {
+    font-size: 18px;
+    color: #44475b;
+
+}
+
+.SCREENER {
+    border: none;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 30px;
+    font-size: 12px;
+    height: 26px;
+    background-color: #e5f8f3;
+    color: #00d09c;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.SCREENER:hover {
+    background-color: #37ecbf;
+    color: #000000;
+}
+
+.usMarketBoxes {
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    gap: 2%;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.usMarketBoxes h4 {
+    color: #44475b;
+}
+
+.zom:hover {
+    zoom: 102%;
+}
+
+.usMarketBoxes h2 {
+    color: red;
+    font-size: 16px;
+
+}
+
+.EtfsUnderUS {
+    display: flex;
+    align-items: center;
+    width: 428%;
+    gap: 30%;
+    margin-top: 3%;
+}
+
+.EtfsUnderUS h3 {
+    color: #44475b;
+    font-size: 18px;
+}
+
+.eTFsbtn {
+    border: none;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 30px;
+    font-size: 12px;
+    height: 26px;
+    background-color: #e5f8f3;
+    color: #00d09c;
+    margin-left: 50%;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.eTFsbtn:hover {
+    background-color: #54f8cd;
+    color: #000000;
+}
+
+.etfBoxes {
+    display: grid;
+    grid-template-columns: repeat(2, 46%);
+    gap: 2%;
+    row-gap: 10%;
+    justify-content: center;
+
+}
+
+.etfBoxesdiv {
+    display: flex;
+    gap: 20%;
+}
+
+.etfBoxesdiv h4 {
+    margin-left: 5%;
+    color: #44475b;
+}
+
+.etfBoxesdiv:hover {
+    zoom: 102%;
+}
+
+.etfBoxesdiv h5 {
+    color: red;
+}
+
+.hiddenText {
+    display: none;
+    font-size: 14px !important;
+    color: #44475b;
+    margin-left: 5%;
+}
+
+.FAQshd {
+    margin-top: 8%;
+    margin-left: 3%;
+    font-size: 20px;
+}
+
+.clickToShowFQS {
+    padding: 3%;
+    /* border-bottom: 1px solid rgb(191, 194, 197); */
+    color: #44475b;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.faqmore {
+
+    border-bottom: 1px solid rgba(191, 194, 197, 0.414);
+    height: auto;
+}
+
+.UsStocksContentRight1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 96%;
+    margin: auto;
+    height: 400px;
+
+}
+
+.UsStocksContentRight1 h2 {
+    font-size: 16px;
+    color: #44475b;
+    margin-left: 25%;
+
+}
+
+.UsStocksContentRight1 img {
+    margin-left: 30%;
+}
+
+.UsStocksContentRight1 button {
+    border: none;
+    background-color: #00d09c;
+    color: whitesmoke;
+    padding: 4%;
+    width: 90%;
+    align-self: center;
+    border-radius: 6px;
+}
+
+.feedBackDiv {
+    display: flex;
+    gap: 20%;
+    padding: 1%;
+    width: 94%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.green {
+    color: #00d09c;
+}
+
+.wnameP {
+    font-size: 14px !important;
+}
+
+.sideBarClickableDiv {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.UserFirstLetterSideBar {
+    padding: 40%;
+    padding-left: 50%;
+    padding-right: 50%;
+    background-color: rgb(73, 43, 207);
+    border-radius: 50%;
+    color: white;
+}
+
+.shadow {
+    border-radius: 10px;
+    padding-left: 15px;
+    /* height: 130px; */
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.09), 0 0 5px 0px rgba(0, 0, 0, 0.10);
+}
+
+.zom {
+    height: 130px;
+    /* padding: 20px; */
+}
+
+.zom h2 {
+    color: #00d09c;
+}
+
+.zom h4 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.shadow>img {
+    margin-top: 10px;
+}
+
+.shadow {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.shadow h4 {
+    font-size: 13px;
+}
+
+.etfBoxesdiv {
+    height: 50px;
+    border-radius: 5px;
+
+    /* margin: auto; */
+}
+
+.etfBoxesdiv:hover {
+    text-overflow: hidden;
+    zoom: 110%;
+}
+
+.etfBoxesdiv h4,
+h5 {
+    margin: auto;
+}
+
+.feedBackDiv {
+    margin-top: 5%;
+}
+
+/* sector */
+#sector {
+    margin-left: 3%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: auto;
+    width: 95%;
+}
+
+.sectorChild {
+    margin-top: 10%;
+    border-radius: 5px;
+    display: flex;
+
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.09), 0 0 5px 0px rgba(0, 0, 0, 0.10);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #44475b;
+    margin-right: 10px;
+    cursor: pointer;
+    justify-content: space-between;
+    height: 40px;
+    /* padding: 5%; */
+}
+
+.sectorChild:hover {
+    background-color: #a8a8a864;
+
+}
+
+.sectorChild p {
+    margin: auto;
+}
+
+.sectornum {
+    color: #00d09c;
+    margin: auto;
+}
+
+.sector {
+    /* margin: auto; */
+    margin-left: 3%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding: 20px;
+
+}
+
+
+#seeall {
+
+
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    color: #00d09c;
+    border: none;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+#footer {
+    position: relative;
+    margin-top: 120%;
+    margin-bottom: 10px;
+}

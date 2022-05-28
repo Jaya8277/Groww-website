@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groww - My Cart</title>
+    <link rel="icon" href="https://groww.in/logo-groww270.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <script src="https://kit.fontawesome.com/157f106a6a.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="navbar">
+            <div id="logoLinks">
+                <div onclick="gotostocks()" id="logo">
+                    <img src="https://hhooww.com/wp-content/uploads/2019/03/Groww-Mutual-Fund-App-Review.jpg"
+                        alt="logo">
+                </div>
+                <div id="navlinks">
+                    <a href="#">Explore</a>
+                    <a href="#">Investments</a>
+                </div>
+            </div>
+            <div id="searchlinks">
+                <div id="searchbox">
+                    <i class="fa-solid fa-magnifying-glass position"></i> <input id="searchinput" type="text"
+                        placeholder="What are you looking for today?">
+                    <div id="searchDrop">
+                    </div>
+                </div>
+                <div id="profilelinks">
+                    <i class="fa-regular fa-bell leftmargin"></i>
+                    <i class="fa-solid fa-wallet leftmargin"></i>
+                    <i id="cart" class="fa-brands fa-opencart leftmargin"></i>
+                    <div class="leftmargin" id="profile">
+
+                        <img id="cart" src="https://avatars.githubusercontent.com/u/55929607?v=4" alt="">
+                        <div id="dropdown">
+                            <div id="userinfo">
+                                <div id="profile">
+                                    <img src="https://avatars.githubusercontent.com/u/55929607?v=4" alt="">
+                                </div>
+                                <div id="nameid">
+                                    <p>TeamGroww</p>
+                                    <p>TeamGroww098@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-building-columns"></i>
+                                <p>Bank & Autopay</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-folder"></i>
+                                <p>Import Funds</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-tag"></i>
+                                <p>Watchlist</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-note-sticky"></i>
+                                <p>Orders</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>SIPs</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-phone"></i>
+                                <p>Help & Support</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-gear"></i>
+                                <p>Settings</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-moon"></i>
+                                <p>Dark Mode</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <p>Log Out</p>
+                            </div>
+                        </div>
+                    </div class="dropinfo">
+                    <i style="font-size: 14px;margin-left: 3px;" id="dd" class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="total">Total item :
+        <span id="totalitem">0</span>
+    </div>
+
+    <div id="all">
+
+        <div id="addtocart">
+        </div>
+
+
+        <!-- cart data show -->
+
+
+
+        <div id="container">
+            <div id="right_view_cart">
+                <h3 id="total_amount_headline">Amount Payable now <br>
+                    <span id="total_amount1-1">0</span>
+                </h3>
+                <h1 id="total_amount"></h1>
+                <img
+                    src="//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/secure-cart-page.382d7372.svg">
+                <p class="safe"> 100% SAFE AND SECURE</p>
+                <p>By Contnuing, you are agree to <a href='#' style="color: black;">Terms and Conditions</a></p>
+                <!-- <p id="total_amount1">Amount payable : <span id="total_amount1-1">0</span></p> -->
+                <button id="pay">
+                    <a href="payment.html">PROCEED TO PAY</a></button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <button onclick="window.location.href='screener.html'" id="addmore">ADD MORE FUNDS</button>
+
+
+
+    <div id="footer">
+
+    </div>
+
+</body>
+
+
+
+<script type="module">
+
+    import { getData, appendData } from "/components/getandappend.js";
+
+    let dropdownboxcaller = document.getElementById('dd');
+    let dropdownbox = document.getElementById('dropdown');
+    var count = 0;
+    dropdownboxcaller.addEventListener('click', function () {
+        count++;
+        if (count % 2 == 1) {
+            dropdownbox.style.display = 'block'
+        }
+        else {
+            dropdownbox.style.display = 'none'
+        }
+    })
+
+    let searchBar = document.getElementById('searchDrop');
+
+    let response = await getData('http://localhost:3000/products');
+    appendData(response, searchBar);
+    let sInput = document.getElementById('searchinput');
+    sInput.addEventListener('click', () => {
+        searchBar.style.display = "block";
+    })
+    sInput.addEventListener('keypress', function () {
+        gD(event);
+    })
+
+    const gD = async (e) => {
+        try {
+            if (e.code === "Enter") {
+                let input = sInput.value;
+
+                let res = await fetch(`http://localhost:3000/products?q=${input}`);
+                let data = await res.json();
+                console.log(data);
+                appendData(data, searchBar);
+            }
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+
+    window.addEventListener('mouseup', (event) => {
+        if (event.target != searchBar) {
+            console.log(event.target);
+            searchBar.style.display = "none";
+        }
+    })
+
+
+</script>
+
+<script src="/JS/cart.js"></script>
+<!-- <script src="/JS/data1.js"></script> -->
+
+
+</html>

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+#slider{
+    left: 205px;
+    width: 119px;
+}
+#mutual{
+    color: #00d09c;
+}
+#mutualFundsSection{
+    /* border: 2px solid black; */
+    width: 100%;
+    display: flex;
+    width: 84%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#col-left{
+    width: 68%;
+    /* border: 1px solid red; */
+}
+#heading{
+    display: flex;
+    margin: 35px 0px;
+    justify-content: space-between;
+}
+#heading>p{
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -.23px;
+    color: #44475b;
+}
+#heading>button{
+    margin-right: 10px;
+    font-size: 11px;
+    border: none;
+    background-color: #e5faf5;
+    color: #0ec38f;
+    padding: 5px 18px;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#funds{
+    display: flex;
+    justify-content: space-evenly;
+}
+#funds>div{
+    /* border: 2px solid rebeccapurple; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 23%;
+    padding: 10px;
+    cursor: pointer;
+}
+#funds>div>img{
+    border: 1px solid #d1d1d1;
+    padding: 3px;
+    border-radius: 5px;
+    width: 30%;
+}
+#funds>div>p{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 16px;
+    color: #44475b;
+}
+#hpCollections{
+    display: flex;
+    justify-content: space-around;
+}
+#hpCollections>div{
+    /* border:2px solid red; */
+    text-align: center;
+    cursor: pointer;
+}
+#hpCollections>div>p{
+font-size: 14px;
+font-weight: 600;
+color: #44475b;
+}
+
+
+
+#col-right{
+    width: 32%;
+    /* border: 1px solid green; */
+}
+#second{
+    border-radius: 5px;
+    width: 349.48px;
+    height: 400px;
+    margin-top: 5%;
+    padding: 9px 18px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+#second>h1{
+    font-weight: 500;
+    font-size: 18px;
+    color:#44475b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+#second>h2{
+    box-sizing: border-box;
+    font-weight: 450;
+    font-size: 20px;
+    align-items: center;
+    width: 310px;
+    padding: 10px 0px;
+    background-color:#00d09c;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#second>p{
+    font-weight: 400;
+    padding: 8px 5px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: 80px;
+}
+#second>*{
+    margin: auto;
+    text-align: center;
+}
+
+#second>img{
+    width: 220px;
+    height: 220px;
+    display: flex;
+}
+
+
+#mFunds{
+    /* border: 2px solid rebeccapurple; */
+    display: flex;
+    width: 50%;
+    margin-left: 8%;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+#mFunds>div{
+    /* border: 2px solid rebeccapurple; */
+    text-align: center;
+    cursor: pointer;
+}
+#mFunds>div:hover>p{
+    color: #0ec38f;
+}
+
+#mFunds>div>p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #44475b;
+}
+#videosSection{
+    width: 84%;
+    margin: auto;
+}
+#videos{
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+#videos>div{
+    /* border: 2px solid black; */
+    cursor: pointer;
+    width: 25%;
+}
+
+#videos>div>img{
+    width: 257px;
+    border-radius: 7px;
+}
+#videos>div>p{
+    width: 74%;
+    margin: auto;
+    font-weight: 600;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/email.css">
+    <link
+    href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+/>
+<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+<link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+/>
+</head>
+<body>
+
+
+    <!-- modal start -->
+    <div class="modal" id="modal">
+        <div class="left_modal">
+        <div  class="leftTitle">
+            <h1 id="">Simple, Free <br> Investing. </h1>
+        </div>
+        <div class="leftAnimation"></div>
+        </div>
+
+
+
+        <div class="right_modal">
+        <div class="close-btnDiv">
+            <button class="close-btn" data-close-button>&times;</button>
+        </div>
+        <div class="rightTitle">
+            <h1>Welcome to Groww</h1>
+        </div>
+        <div class="Gdiv">
+            <span href="google.com"><img src="https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg"  alt="" >Continue With Google</span>
+        </div>
+        <div class="loginDiv">
+            <div class="ORdiv">Or</div>
+            <div class="inputDiv" id="inputDiv">
+                <input type="email"  id="login-mail" class="login-mail" placeholder="Enter Your Email Address">
+                <h5 id="email-validationText">Please Enter Email Address</h5>
+                <!-- <input type="password"   id="login-otp" class="login-otp" placeholder="Enter Password">
+                <h5 id="otp-validationText">Wrong OTP Number please close this box and try again</h5> -->
+                <div class="login-btnDiv">
+                <button id="login-btn" class="login-btn">Continue</button>
+            </div>
+            <div class="login-tc">
+                <p>By proceeding, I agree to <b><u>T&C</u></b> and <b><u>Privacy policy</u></b></p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+    <div class="btnDiv">
+        <button id="btn_login" data-modal-target="#modal">
+        Login/Register
+        </button>
+    </div>
+    
+</body>
+</html>
+<script src="js/email.js"></script>

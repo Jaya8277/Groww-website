@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://groww.in/logo-groww270.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4f2af7deb6.js" crossorigin="anonymous"></script>
+    <title>stocks</title>
+</head>
+<link rel="stylesheet" href="styles/stocks.css">
+
+<body>
+    <div id="nav"></div>
+    <div id="container">
+        <div>
+            <h2 id="open">MARKET OPENS AT 09:15 AM</h2>
+            <div id="index">
+                <div id="title">
+                    <h1>Index</h1>
+                    <P style="cursor: pointer;" onclick="gotoscreener()">SCREENER</P>
+                </div>
+                <div id="nifty"></div>
+            </div>
+            <br><br>
+            <div id="news">
+                <div id="title">
+                    <h1>Stocks in News</h1>
+                    <P>News</P>
+                </div>
+                <div id="Ns"></div>
+            </div>
+            <br><br>
+            <div id="gainers">
+                <div id="title">
+                    <div style="display: flex; align-items: center;">
+                        <h1>Top Gainers</h1>
+                        <p>NIFTY100</p>
+                    </div>
+
+                    <P style="cursor: pointer; background-color:white;" onclick="gotoscreener()">SEE MORE</P>
+                </div>
+                <div id="gain"></div>
+            </div>
+            <br><br>
+            <div id="loosers">
+                <div id="title">
+                    <div style="display: flex; align-items: center;">
+                        <h1>Top Losers</h1>
+                        <p>NIFTY100</p>
+                    </div>
+
+                    <P style="cursor: pointer; background-color:white;" onclick="gotoscreener()">SEE MORE</P>
+                </div>
+                <div id="loose"></div>
+            </div>
+            <br><br>
+            <div id="sector">
+                <div id="title">
+                    <div style="display: flex; align-items: center;">
+                        <h1>Top Sectors</h1>
+                        <p>NIFTY100</p>
+                    </div>
+                    <P style="background-color:white;">SEE ALL</P>
+                </div>
+                <div id="sec">
+                    <div>
+                        <p>Banking</p>
+                        <p>36</p>
+                    </div>
+                    <div>
+                        <p>Energy</p>
+                        <p>88</p>
+                    </div>
+                    <div>
+                        <p>Healthcare</p>
+                        <p>203</p>
+                    </div>
+                    <div>
+                        <p>FMCG</p>
+                        <p>201</p>
+                    </div>
+                    <div>
+                        <p>Automobile</p>
+                        <p>131</p>
+                    </div>
+                    <div>
+                        <p>Tele-Communication</p>
+                        <p>50</p>
+                    </div>
+                    <div>
+                        <p>Media & Entertainment</p>
+                        <p>92</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div id="cap">
+                <div id="title">
+                    <div style="display: flex; align-items: center;">
+                        <h1>Top by Market Cap Sectors</h1>
+                        <p>NIFTY100</p>
+                    </div>
+                    <P style="background-color:white;">SEE ALL</P>
+                </div>
+                <div id="Stocks">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Charts</th>
+                                <th>Market Price</th>
+                                <th>Watchlist</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <div id="sidebar">
+                <div> <i class="fa-solid fa-chart-simple"></i>
+                    <h3>F&O - Futures & Options</h3>
+                </div>
+                <div> <i class="fa-solid fa-shapes"></i>
+                    <h3>ETF - Exchange Traded Funds</h3>
+                </div>
+                <div> <i class="fa-solid fa-bullhorn"></i>
+                    <h3>IPO - Initial Public Offerings</h3>
+                </div>
+                <div> <i class="fa-solid fa-square-caret-up"></i>
+                    <h3>SGB - Sovereign Gold Bond</h3>
+                </div>
+            </div>
+            <div id="second">
+                <img src="https://assets-netstorage.groww.in/app-assets/others/account_setup.png" alt="">
+                <h1>Attention required!</h1>
+                <h3>Complete setting up your account to start investing on Groww</h3>
+                <h2>COMPLETE SETUP</h2>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="footer"></div>
+</body>
+<script src="JS/stocks.js"></script>
+
+</html>
+
+<script type="module">
+
+    import { append2 } from "./JS/data.js"
+
+    let newsData = JSON.parse(localStorage.getItem("news"))
+    let m = document.getElementById("Ns");
+
+    append2(newsData, m)
+
+    //------------------------------------------------------------------------------------------
+
+    let gain = JSON.parse(localStorage.getItem("gainers"))
+    let s = document.getElementById("gain");
+
+    append2(gain, s)
+
+    //------------------------------------------------------------------------------------------
+
+    let loose = JSON.parse(localStorage.getItem("loosers"))
+    let p = document.getElementById("loose");
+
+    append2(loose, p)
+
+    //------------------------------------------------------------------------------------------
+
+
+    import { append3 } from "./JS/data.js"
+
+    let x = JSON.parse(localStorage.getItem("index"))
+    console.log("x", x)
+    let i = document.getElementById("nifty");
+
+    append3(x, i)
+
+    //---------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+</script>
+<script>
+    function gotoscreener() {
+        window.location.href = 'screener.html';
+    }
+</script>
+<script type="module">
+
+    import navbar from "./components/header.js"
+    // console.log(navbar)
+
+    let header = document.getElementById("nav");
+    header.innerHTML = navbar();
+
+    import { getData, appendData } from "./components/getandappend.js"
+
+
+    let stocks = document.getElementById('stocks');
+    let mutualfunds = document.getElementById('mutual');
+    let fixed = document.getElementById('fixed');
+    let us = document.getElementById('us');
+    stocks.addEventListener('click', () => {
+        slider.style.left = "110px";
+        slider.style.width = "64px";
+    })
+    mutualfunds.addEventListener('click', () => {
+        slider.style.left = "205px";
+        slider.style.width = "119px";
+    })
+    fixed.addEventListener('click', () => {
+        slider.style.left = "358px";
+        slider.style.width = "128px";
+    })
+    us.addEventListener('click', () => {
+        slider.style.left = "524px";
+        slider.style.width = "90px";
+    })
+
+
+    let dropdownboxcaller = document.getElementById('dd');
+    let dropdownbox = document.getElementById('dropdown');
+    var count = 0;
+    dropdownboxcaller.addEventListener('click', function () {
+        count++;
+        if (count % 2 == 1) {
+            dropdownbox.style.display = 'block'
+        }
+        else {
+            dropdownbox.style.display = 'none'
+        }
+    })
+
+    let searchBar = document.getElementById('searchDrop');
+
+    let response = await getData('http://localhost:3000/products');
+    appendData(response, searchBar);
+    let sInput = document.getElementById('searchinput');
+    sInput.addEventListener('click', () => {
+        searchBar.style.display = "block";
+    })
+    sInput.addEventListener('keypress', function () {
+        gD(event);
+    })
+
+    const gD = async (e) => {
+        try {
+            if (e.code === "Enter") {
+                let input = sInput.value;
+
+                let res = await fetch(`http://localhost:3000/products?q=${input}`);
+                let data = await res.json();
+                console.log(data);
+                appendData(data, searchBar);
+            }
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+
+    window.addEventListener('mouseup', (event) => {
+        if (event.target != searchBar) {
+            console.log(event.target);
+            searchBar.style.display = "none";
+        }
+    })
+    let cart = document.getElementById('cart');
+    let stocksTab = document.getElementById('stocks');
+    let mfTab = document.getElementById('mutual');
+    let fTab = document.getElementById('fixed');
+    let usTab = document.getElementById('us');
+    mfTab.addEventListener('click', () => {
+        window.location.href = 'mutualfunds.html';
+    })
+    fTab.addEventListener('click', () => {
+        window.location.href = 'fixeddepo.html';
+    })
+    usTab.addEventListener('click', () => {
+        window.location.href = 'usStocks.html';
+    })
+    stocksTab.addEventListener('click', () => {
+        window.location.href = 'stocks.html';
+    })
+    cart.addEventListener('click', () => {
+        window.location.href = 'addtocart.html';
+    })
+</script>
+
+<script type="module">
+    import footer from "./components/footer.js";
+    let parent = document.getElementById('footer');
+    parent.innerHTML = footer();
+</script>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/buyStocks.css">
+    <script src="https://kit.fontawesome.com/157f106a6a.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="header">
+        <!-------navbar is here just import it from components-------->
+        <div id="navbar">
+            <div id="logoLinks">
+                <div onclick="gotostocks()" id="logo">
+                    <img src="https://hhooww.com/wp-content/uploads/2019/03/Groww-Mutual-Fund-App-Review.jpg"
+                        alt="logo">
+                </div>
+                <div id="navlinks">
+                    <a href="#">Explore</a>
+                    <a href="#">Investments</a>
+                </div>
+            </div>
+            <div id="searchlinks">
+                <div id="searchbox">
+                    <i class="fa-solid fa-magnifying-glass position"></i> <input id="searchinput" type="text"
+                        placeholder="What are you looking for today?">
+                    <div id="searchDrop">
+                    </div>
+                </div>
+                <div id="profilelinks">
+                    <i class="fa-regular fa-bell leftmargin"></i>
+                    <i class="fa-solid fa-wallet leftmargin"></i>
+                    <i id="cart" class="fa-brands fa-opencart leftmargin"></i>
+                    <div class="leftmargin" id="profile">
+
+                        <img src="https://avatars.githubusercontent.com/u/55929607?v=4" alt="">
+                        <div id="dropdown">
+                            <div id="userinfo">
+                                <div id="profile">
+                                    <img src="https://avatars.githubusercontent.com/u/55929607?v=4" alt="">
+                                </div>
+                                <div id="nameid">
+                                    <p>TeamGroww</p>
+                                    <p>TeamGroww098@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-building-columns"></i>
+                                <p>Bank & Autopay</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-folder"></i>
+                                <p>Import Funds</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-tag"></i>
+                                <p>Watchlist</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-note-sticky"></i>
+                                <p>Orders</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>SIPs</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-phone"></i>
+                                <p>Help & Support</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-gear"></i>
+                                <p>Settings</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-moon"></i>
+                                <p>Dark Mode</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <p>Log Out</p>
+                            </div>
+                        </div>
+                    </div class="dropinfo">
+                    <i style="font-size: 14px;margin-left: 3px;" id="dd" class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="line"></div>
+    <div id="main">
+        <div id="container">
+            <div id="stckDiv"></div>
+            <div id="graph">
+                <img src="./Images/graph.png" alt="">
+            </div>
+            <div id="performance">
+                <img src="./Images/performance report.png" alt="">
+            </div>
+
+
+
+            <div id="analystEstimates">
+                <div id="a">
+                    <h3>Analyst Estimates</h3>
+                    <div><img src="https://www.svgimages.com/svg-image/s4/i-logo-256x256.png" alt=""></div>
+                </div>
+                <div id="b">
+                    <div class="b1">
+                        <h1>81%</h1>
+                    </div>
+                    <div class="b2">
+                        <div id="b21">
+                            <p>Buy</p>
+                            <div></div>
+                            <p>81%</p>
+                        </div>
+                        <div id="b22">
+                            <p>Hold</p>
+                            <div></div>
+                            <p>13%</p>
+                        </div>
+                        <div id="b23">
+                            <p>Sell</p>
+                            <div></div>
+                            <p>6%</p>
+                        </div>
+                        <div id="b24">
+                            <p>
+                                Aggregatedby Refinitiv from 32 Analysts
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="shareholder">
+                <h3>Recently Viewed</h3>
+                <div id="funds">
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="buyStocks">
+            <div id="insideDiv">
+                <div id="addCart">
+                    <div id="monthlysip">MONTHLY SIP</div>
+                </div>
+                <div id="dash"></div>
+
+                <div class="sipAmt">
+                    <p>SIP Amount</p>
+                    <input id="sipAmount" type="text" placeholder="  ₹ 0" />
+                </div>
+
+                <div class="value">
+                    <p>Monthly SIP Date</p>
+                    <input type="text" placeholder="    30 - 03 - 2022" />
+                </div>
+                <div class="value3">
+                    <p>Next SIP Instalment on 15-12-2022</p>
+                    <button style="cursor: pointer;" onclick="addtobag()">ADD TO CART</button>
+                    <button style="cursor: pointer;" onclick="window.location.href='addtocart.html'">GO TO CART</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+</body>
+<script type="module">
+
+
+    import { getData, appendData } from "./components/getandappend.js";
+
+
+
+    let dropdownboxcaller = document.getElementById('dd');
+    let dropdownbox = document.getElementById('dropdown');
+    var count = 0;
+    dropdownboxcaller.addEventListener('click', function () {
+        count++;
+        if (count % 2 == 1) {
+            dropdownbox.style.display = 'block'
+        }
+        else {
+            dropdownbox.style.display = 'none'
+        }
+    })
+
+    let searchBar = document.getElementById('searchDrop');
+
+    let response = await getData('http://localhost:3000/products');
+    appendData(response, searchBar);
+    let sInput = document.getElementById('searchinput');
+    sInput.addEventListener('click', () => {
+        searchBar.style.display = "block";
+    })
+    sInput.addEventListener('keypress', function () {
+        gD(event);
+    })
+
+    const gD = async (e) => {
+        try {
+            if (e.code === "Enter") {
+                let input = sInput.value;
+
+                let res = await fetch(`http://localhost:3000/products?q=${input}`);
+                let data = await res.json();
+                console.log(data);
+                appendData(data, searchBar);
+            }
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+
+    window.addEventListener('mouseup', (event) => {
+        if (event.target != searchBar) {
+            console.log(event.target);
+            searchBar.style.display = "none";
+        }
+    })
+
+    let data = JSON.parse(localStorage.getItem("stock"));
+    console.log(data);
+
+    data.forEach(function (el) {
+        let div = document.createElement("div");
+
+
+        div.setAttribute("class", "cnt")
+
+        let inrDiv = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = el.product_image;
+
+        let name = document.createElement("p");
+        name.innerText = el.product_name;
+
+
+        let per = document.createElement("h5");
+        per.innerText = `(+` + el.return_percentage + `)`;
+
+        let price = document.createElement("h1");
+        price.innerText = `₹` + el.nav;
+
+        inrDiv.append(img);
+        div.append(inrDiv, name, price, per);
+
+
+        document.getElementById("stckDiv").append(div);
+
+    })
+
+
+    let fundsData = await getData('http://localhost:3000/products');
+    let fundsContainer = document.getElementById('funds');
+    appendFunds(fundsData);
+    function appendFunds(data) {
+        fundsContainer.innerHTML = '';
+        for (let i = 0; i < 4; i++) {
+            let div = document.createElement('div');
+            div.addEventListener("click", () => {
+                let arr = [];
+                arr.push(data[i]);
+                localStorage.setItem('stock', JSON.stringify(arr));
+                // console.log(arr);
+
+                window.location.href = "mutualfunds.html"
+            })
+
+
+            let image = document.createElement('img');
+            image.src = data[i].product_image;
+
+            let name = document.createElement('p');
+            name.innerText = data[i].product_name;
+
+            let percentage = document.createElement('p');
+            percentage.innerText = data[i].percentage_interval[2];
+
+            div.append(image, name, percentage);
+            // console.log(div);
+            fundsContainer.append(div);
+        }
+    }
+
+    import footer from "./components/footer.js";
+    let par = document.getElementById('footer');
+    par.innerHTML = footer();
+
+
+</script>
+
+</html>
+<script>
+    let cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+    function gotostocks() {
+        window.location.href = 'stocks.html';
+    }
+    let cart = document.getElementById('cart');
+    cart.addEventListener('click', () => {
+        window.location.href = 'addtocart.html';
+    })
+
+    function addtobag() {
+        let sipAmount = document.getElementById('sipAmount');
+        let itemData = JSON.parse(localStorage.getItem('stock'));
+        itemData[0].amount = sipAmount.value;
+        cartData.push(itemData[0]);
+        localStorage.setItem('cartData', JSON.stringify(cartData));
+        // console.log(itemData[0]);
+        window.location.href = 'addtocart.html';
+    }
+</script>

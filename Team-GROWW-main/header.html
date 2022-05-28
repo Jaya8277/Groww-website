@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <script src="https://kit.fontawesome.com/157f106a6a.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header">
+        <!-------navbar is here just import it from components-------->
+
+    </div>
+</body>
+<script type="module">
+    import header from "./components/header.js";
+    import { getData, appendData } from "./components/getandappend.js";
+    let parent = document.getElementById('header');
+    parent.innerHTML = header();
+
+
+    let stocks = document.getElementById('stocks');
+    let mutualfunds = document.getElementById('mutual');
+    let fixed = document.getElementById('fixed');
+    let us = document.getElementById('us');
+    stocks.addEventListener('click', () => {
+        slider.style.left = "110px";
+        slider.style.width = "64px";
+    })
+    mutualfunds.addEventListener('click', () => {
+        slider.style.left = "205px";
+        slider.style.width = "119px";
+    })
+    fixed.addEventListener('click', () => {
+        slider.style.left = "358px";
+        slider.style.width = "128px";
+        window.location.href="./fixeddepo.html"
+    })
+    us.addEventListener('click', () => {
+        slider.style.left = "524px";
+        slider.style.width = "90px";
+    })
+
+
+    let dropdownboxcaller = document.getElementById('dd');
+    let dropdownbox = document.getElementById('dropdown');
+    var count = 0;
+    dropdownboxcaller.addEventListener('click', function () {
+        count++;
+        if (count % 2 == 1) {
+            dropdownbox.style.display = 'block'
+        }
+        else {
+            dropdownbox.style.display = 'none'
+        }
+    })
+
+    let searchBar = document.getElementById('searchDrop');
+
+    let response = await getData('http://localhost:3000/products');
+    appendData(response, searchBar);
+    let sInput = document.getElementById('searchinput');
+    sInput.addEventListener('click', () => {
+        searchBar.style.display = "block";
+    })
+    sInput.addEventListener('keypress', function () {
+        gD(event);
+    })
+
+    const gD = async (e) => {
+        try {
+            if (e.code === "Enter") {
+                let input = sInput.value;
+
+                let res = await fetch(`http://localhost:3000/products?q=${input}`);
+                let data = await res.json();
+                console.log(data);
+                appendData(data, searchBar);
+            }
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+
+    window.addEventListener('mouseup', (event) => {
+        if (event.target != searchBar) {
+            console.log(event.target);
+            searchBar.style.display = "none";
+        }
+    })
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- if (e.code == "Enter") {
+    let input = sInput.value;
+    // let res1 = await getData(`http://localhost:3000/products?q=${input}`);
+    console.log(input);
+} -->

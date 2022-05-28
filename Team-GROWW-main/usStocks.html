@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Us Stocks</title>
+    <link rel="icon" href="https://groww.in/logo-groww270.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/usStock.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <!-------navbar is here just import it from components-------->
+    </div>
+
+
+    <div id="main2">
+        <!-- <p>US Stocks</p> -->
+
+        <div class="UsStocksContent">
+
+            <div class="UsStocksContentLeft">
+
+                <div class="UsStocksContentLeft1">
+                    <div>
+                        <div class="fundYourUsd">
+                            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" height="18"
+                                width="18">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.369.522l8.1 8.1c.324.324.531.783.531 1.278s-.198.945-.531 1.269l-6.3 6.3A1.76 1.76 0 019.9 18c-.495 0-.945-.198-1.269-.522l-8.1-8.1A1.796 1.796 0 010 8.1V1.8C0 .81.81 0 1.8 0h6.3c.495 0 .945.198 1.269.522zM1.8 3.15c0 .747.603 1.35 1.35 1.35.747 0 1.35-.603 1.35-1.35 0-.747-.603-1.35-1.35-1.35-.747 0-1.35.603-1.35 1.35z"
+                                    fill="#00D09C"></path>
+                            </svg>
+                            <h4>Fund Your USD balance to get $10</h4>
+                        </div>
+                        <p>Get additional 10 after funding your USD balance for the first time. No minimum
+                            funding amount required.</p>
+                    </div>
+                    <div> <img class=""
+                            src="//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/usOfferBannerImg.bccfc20b.svg"
+                            width="210" height="112" alt="Offer"></div>
+                </div>
+                <div class="usMarketOpenTime">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="24"
+                        width="24" class="usel42BellIcon">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2a8.445 8.445 0 013.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43a8.495 8.495 0 013.54 6.42zM18 11c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2v-5zm-6 11c.14 0 .27-.01.4-.04.65-.14 1.18-.58 1.44-1.18.1-.24.15-.5.15-.78h-4c.01 1.1.9 2 2.01 2z">
+                        </path>
+                    </svg>
+                    <h4>US Market Opens at 7:00 PM IST on Mar 29</h4>
+                </div>
+                <div class="TopInMarket">
+                    <h3>Top by Market Cap</h3>
+                    <button class="SCREENER" id="screnerbtn">SCREENER</button>
+                </div>
+                <div class="usMarketBoxes">
+
+                    <div class="shadow zom">
+                        <img class="usel42StockImage"
+                            src="https://assets-netstorage.groww.in/intl-stocks/logos/AAPL.png" width="35" height="35"
+                            alt="AAPL">
+                        <h4>Apple,inc.</h4>
+                        <h2>3.93%</h2>
+                    </div>
+                    <div class="shadow zom">
+                        <img class="usel42StockImage"
+                            src="https://assets-netstorage.groww.in/intl-stocks/logos/MSFT.png" width="35" height="35"
+                            alt="MSFT">
+                        <h4>Microsoft Corpora...</h4>
+                        <h2>2.91%</h2>
+                    </div>
+                    <div class="shadow zom">
+                        <img class="usel42StockImage"
+                            src="https://assets-netstorage.groww.in/intl-stocks/logos/GOOGL.png" width="35" height="35"
+                            alt="GOOGL">
+                        <h4>Alphabet Inc. -Cla...</h4>
+                        <h2>1.36%</h2>
+                    </div>
+                    <div class="shadow zom">
+                        <img class="usel42StockImage"
+                            src="https://assets-netstorage.groww.in/intl-stocks/logos/GOOGL.png" width="35" height="35"
+                            alt="GOOGL">
+                        <h4>Alphabet Inc. -Cla...</h4>
+                        <h2>1.72%</h2>
+                    </div>
+                    <div class="EtfsUnderUS">
+                        <h3>ETFs</h3>
+                        <button class="eTFsbtn">ALL ETFS</button>
+                    </div>
+                </div>
+
+                <div class="etfBoxes">
+
+                    <div class="etfBoxesdiv shadow">
+                        <h4>S&P 500 ETF Trust SPDR</h4>
+                        <h5>-0.88%</h5>
+                    </div>
+                    <div class="etfBoxesdiv shadow">
+                        <h4>Growth ETF Vanguard</h4>
+                        <h5>-2.26%</h5>
+                    </div>
+                    <div class="etfBoxesdiv shadow">
+                        <h4>Schwab US Small-Cap ETF</h4>
+                        <h5>-1.90%</h5>
+                    </div>
+                    <div class="etfBoxesdiv shadow">
+                        <h4>Russell 2000 iShares ETF</h4>
+                        <h5>-2.02%</h5>
+                    </div>
+                </div>
+                <!-- sectors -->
+                <h3 class="sector">Sector</h3>
+                <div id="sector">
+
+                    <div class="sectorChild">
+                        <p>Technology</p>
+                        <hr>
+                        <p class="sectornum">478</p>
+
+                    </div>
+                    <div class="sectorChild">
+                        <p>Health Care</p>
+                        <hr>
+                        <p class="sectornum">478</p>
+                    </div>
+                    <div class="sectorChild">
+                        <p>Financial Services</p>
+                        <hr>
+                        <p>478</p>
+                    </div>
+                    <div class="sectorChild">
+                        <p>Industrial</p>
+                        <hr>
+                        <p class="sectornum">478</p>
+                    </div>
+                    <div class="sectorChild">
+                        <p>Cutomar Cyclical</p>
+                        <hr>
+                        <p class="sectornum">478</p>
+                    </div>
+                    <div class="sectorChild">
+                        <p>Energy</p>
+                        <hr>
+                        <p class="sectornum">478</p>
+                    </div>
+                    <div class="sectorChild">
+                        <p>Materials</p>
+                        <hr>
+                        <p class="sectornum">478</p>
+                    </div>
+                    <div class="sectorChild">
+                        <p>Real Estate</p>
+                        <hr>
+                        <p class="sectornum">478</p>
+                    </div>
+                    <div class="sectorChild">
+                        <p>Customer</p>
+                        <hr>
+                        <p class="sectornum">478</p>
+                    </div>
+                    <div class="sectorChild">
+                        <p>Utility</p>
+                        <hr>
+                        <p class="sectornum">478</p>
+                    </div>
+                    <div class="sectorChild">
+                        <p>Communication</p>
+                        <hr>
+                        <p class="sectornum">548</p>
+                    </div>
+                </div>
+
+                <h3 id="seeall">SEE ALL STOCKS > </h3>
+
+                <h2 class="FAQshd">FAQs</h2>
+                <div class="FAQsDiv">
+
+                    <div class="faqmore">
+                        <h4 class="clickToShowFQS">Where is the account held? Who is responsible for the custody
+                            and clearing?
+                            <i class="fa-solid fa-angle-down"></i>
+                        </h4>
+
+
+                        <p class="hiddenText">The brokerage account is managed by ViewTrade securities - an SEC
+                            registered and FINRA regulated broker for books and records, which works with Apex
+                            Clearing Corporation for trade the clearing and custodian aspects of user accounts.
+                        </p>
+                    </div>
+                    <div class="faqmore">
+                        <h4 class="clickToShowFQS">Can I change my bank account later for transactions?
+                            <i class="fa-solid fa-angle-down"></i>
+                        </h4>
+                        <p class="hiddenText">It is not suggested to change the bank account upon a successful
+                            transaction.
+                            This is because of AML (Anti Money Laundering) law that the governing agencies file
+                            and monitor.
+                            However, if you wish to change your bank account provided a genuine reason, in cases
+                            like bank account closure, etc. please contact us.
+                        </p>
+                    </div>
+                    <div class="faqmore">
+                        <h4 class="clickToShowFQS"> Can I use my existing Indian Groww Balance to fund my US
+                            account? <i class="fa-solid fa-angle-down"></i></h4>
+                        <p class="hiddenText">No, Groww balance can only be used for Indian stock and MF
+                            investments and not for US stocks.
+                            This is an international wire transaction and the account is being opened at Groww’s
+                            broker partner’s end. Before you trade, the funds have to be directed under the LRS
+                            process.
+                            You are funding your own brokerage account from India to invest in US stocks. You
+                            could consider this as your USD balance.
+                        </p>
+                    </div>
+                    <div class="faqmore">
+                        <h4 class="clickToShowFQS">What is the cost that my bank would charge me for doing an
+                            LRS? <i class="fa-solid fa-angle-down"></i></h4>
+                        <p class="hiddenText">For any LRS transaction, the banks generally charge a forex
+                            conversion rate and a service charge plus tax for doing any outward remittances.
+                            Groww is working with multiple Indian banks for a pre-negotiated rate on remittances
+                            for its users.
+                            You can find these banks available on Groww’s platform.
+                        </p>
+                    </div>
+                    <div class="faqmore">
+                        <h4 class="clickToShowFQS">What are tax implications? <i class="fa-solid fa-angle-down"></i>
+                        </h4>
+                        <p class="hiddenText">Taxation for US stocks is very straight forward.
+                            Due to the Double Taxation Avoidance Agreement (DTAA) between India and the US there
+                            is no tax on capital gains deducted in the US for Indian residents.
+                            You will have to pay for capital gains tax in India based upon long term (above 24
+                            months) and short term (below 24 months) holdings of your investments.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="UsStocksContentRight">
+
+                <div class="UsStocksContentRight1 shadow">
+                    <img class="usOp141Image"
+                        src="//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/usOnbdPending.c89f2ee0.svg"
+                        width="122" height="180" alt="UNLOCK US STOCKS">
+                    <h2>-Free Account Activation</h2>
+                    <h2>-Fractional Shares Investing</h2>
+                    <h2>-No Brokerage</h2>
+                    <button>ACTIVATE NOW</button>
+                </div>
+                <div class="feedBackDiv shadow">
+                    <h4>Help Us Improve</h4>
+                    <h4 class="green">Give Us Feedback</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <hr class="lineTop">
+    </div>
+
+
+    <div id="footer">
+
+    </div>
+</body>
+
+</html>
+<script src="./JS/usStock.js"></script>
+<script type="module">
+
+    import header from "./components/header.js";
+    import { getData, appendData } from "./components/getandappend.js";
+    let parent = document.getElementById('header');
+    parent.innerHTML = header();
+
+    import footer from "./components/footer.js";
+    let parent2 = document.getElementById('footer');
+    parent2.innerHTML = footer();
+
+
+    let stocks = document.getElementById('stocks');
+    let mutualfunds = document.getElementById('mutual');
+    let fixed = document.getElementById('fixed');
+    slider.style.left = "515px"
+    slider.style.width = "90px";
+
+    let us = document.getElementById('us');
+    stocks.addEventListener('click', () => {
+        window.location.href = 'stocks.html';
+    })
+    mutualfunds.addEventListener('click', () => {
+        window.location.href = 'mutualfunds.html';
+    })
+    fixed.addEventListener('click', (e) => {
+        e.preventDefault()
+        window.location.href = "./fixeddepo.html"
+    })
+    us.addEventListener('click', () => {
+        window.location.href = "./usStocks.html"
+    })
+    let cart = document.getElementById('cart');
+    cart.addEventListener('click', () => {
+        window.location.href = 'addtocart.html';
+    })
+    let dropdownboxcaller = document.getElementById('dd');
+    let dropdownbox = document.getElementById('dropdown');
+    var count = 0;
+    dropdownboxcaller.addEventListener('click', function () {
+        count++;
+        if (count % 2 == 1) {
+            dropdownbox.style.display = 'block'
+        }
+        else {
+            dropdownbox.style.display = 'none'
+        }
+    })
+
+
+    let searchBar = document.getElementById('searchDrop');
+
+    let response = await getData('http://localhost:3000/products');
+    appendData(response, searchBar);
+    let sInput = document.getElementById('searchinput');
+    sInput.addEventListener('click', () => {
+        searchBar.style.display = "block";
+    })
+    sInput.addEventListener('keypress', function () {
+        gD(event);
+    })
+
+    const gD = async (e) => {
+        try {
+            if (e.code === "Enter") {
+                let input = sInput.value;
+
+                let res = await fetch(`http://localhost:3000/products?q=${input}`);
+                let data = await res.json();
+                // console.log(data);
+                appendData(data, searchBar);
+            }
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+
+    window.addEventListener('mouseup', (event) => {
+        if (event.target != searchBar) {
+            // console.log(event.target);
+            searchBar.style.display = "none";
+        }
+    })
+
+
+
+
+
+
+</script>

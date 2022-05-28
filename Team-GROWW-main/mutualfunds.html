@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/mutualfunds.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="icon" href="https://groww.in/logo-groww270.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/157f106a6a.js" crossorigin="anonymous"></script>
+    <title>Mutual Funds</title>
+</head>
+
+<body>
+    <div id="header">
+        <!-------navbar is here just import it from components-------->
+
+    </div>
+
+    <div id="mutualFundsSection">
+        <div id="col-left">
+            <div style="margin-bottom: 85px;" id="popularFunds">
+                <div id="heading">
+                    <p>Popular Funds</p>
+                    <button onclick="gotoscreener()">SCREENER</button>
+                </div>
+                <div id="funds">
+
+                </div>
+            </div>
+            <div id="handpicked">
+                <div id="heading">
+                    <p>Handpicked Collections</p>
+                </div>
+                <div id="hpCollections">
+                    <div>
+                        <img src="Images/highreturn.png" alt="">
+                        <p>HIGH RETURN</p>
+                    </div>
+                    <div>
+                        <img style="margin-bottom: 13px;" src="Images/pigibank.png" alt="">
+                        <p>TAX SAVING</p>
+                    </div>
+                    <div>
+                        <img style="margin-bottom: 13px;" src="Images/betterFD.png" alt="">
+                        <p>BETTER THAN FD</p>
+                    </div>
+                    <div>
+                        <img style="margin-bottom: 13px;" src="Images/topcompanies.png" alt="">
+                        <p>TOP COMPANIES</p>
+                    </div>
+                    <div>
+                        <img style="margin-bottom: 13px;" src="Images/sip.png" alt="">
+                        <p>SIP with ₹500</p>
+                    </div>
+                    <div>
+                        <img style="margin-bottom: 13px;" src="Images/sectorsbets.png" alt="">
+                        <p>SECTOR BETS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="col-right">
+            <div id="second">
+                <img src="https://assets-netstorage.groww.in/app-assets/others/account_setup.png" alt="">
+                <h1>New to Mutual Funds?</h1>
+                <p>Starts exploring mutual funds to began your investing journey</p>
+                <h2>Explore Mutual Funds</h2>
+            </div>
+        </div>
+    </div>
+    <div id="more" style="margin-bottom: 130px;">
+        <div id="mFunds">
+            <div>
+                <img src="Images/importFunds.png" alt="">
+                <p>IMPORT FUNDS</p>
+            </div>
+            <div>
+                <img src="Images/smartSave.png" alt="">
+                <p>SMART SAVE</p>
+            </div>
+            <div>
+                <img style="margin-bottom: 3px;" src="Images/switchdirect.png" alt="">
+                <p>SWITCH TO DIRECT</p>
+            </div>
+            <div>
+                <img src="Images/liveinfo.png" alt="">
+                <p>LIVE INFO</p>
+            </div>
+            <div>
+                <img style="margin-bottom: 4px;" src="Images/compareFunds.png" alt="">
+                <p>COMPARE FUNDS</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="videosSection">
+        <div id="heading">
+            <p>VIDEOS FROM GROWW</p>
+        </div>
+        <div id="videos">
+            <div>
+                <img src="https://img.youtube.com/vi/w-UxK4luEwQ/0.jpg" alt="">
+                <p>How to do SIP on Groww</p>
+            </div>
+            <div>
+                <img src="https://img.youtube.com/vi/RxxvY_H7z64/0.jpg" alt="">
+                <p>How to do lumpsum investment on Groww</p>
+            </div>
+            <div>
+                <img src="https://img.youtube.com/vi/jfb8LIdk-Zo/0.jpg" alt="">
+                <p>How to convert regular mutual funds to direct plan</p>
+            </div>
+            <div>
+                <img src="https://img.youtube.com/vi/mgrrT3-S4pc/0.jpg" alt="">
+                <p>Compare Mutual funds</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer">
+
+    </div>
+</body>
+<script type="module">
+    import header from "./components/header.js";
+    import { getData, appendData } from "./components/getandappend.js";
+    let parent = document.getElementById('header');
+    parent.innerHTML = header();
+
+
+    let stocks = document.getElementById('stocks');
+    let mutualfunds = document.getElementById('mutual');
+    let fixed = document.getElementById('fixed');
+    let us = document.getElementById('us');
+    stocks.addEventListener('click', () => {
+        slider.style.left = "110px";
+        slider.style.width = "64px";
+    })
+    mutualfunds.addEventListener('click', () => {
+        slider.style.left = "205px";
+        slider.style.width = "119px";
+    })
+    fixed.addEventListener('click', () => {
+        slider.style.left = "358px";
+        slider.style.width = "128px";
+    })
+    us.addEventListener('click', () => {
+        slider.style.left = "524px";
+        slider.style.width = "90px";
+    })
+
+
+    let dropdownboxcaller = document.getElementById('dd');
+    let dropdownbox = document.getElementById('dropdown');
+    var count = 0;
+    dropdownboxcaller.addEventListener('click', function () {
+        count++;
+        if (count % 2 == 1) {
+            dropdownbox.style.display = 'block'
+        }
+        else {
+            dropdownbox.style.display = 'none'
+        }
+    })
+
+    let searchBar = document.getElementById('searchDrop');
+
+    let response = await getData('http://localhost:3000/products');
+    // console.log(response);
+    appendData(response, searchBar);
+    let sInput = document.getElementById('searchinput');
+    sInput.addEventListener('click', () => {
+        searchBar.style.display = "block";
+    })
+    sInput.addEventListener('keypress', function () {
+        gD(event);
+    })
+
+    const gD = async (e) => {
+        try {
+            if (e.code === "Enter") {
+                let input = sInput.value;
+
+                let res = await fetch(`http://localhost:3000/products?q=${input}`);
+                let data = await res.json();
+                console.log(data);
+                appendData(data, searchBar);
+            }
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+
+    window.addEventListener('mouseup', (event) => {
+        if (event.target != searchBar) {
+            // console.log(event.target);
+            searchBar.style.display = "none";
+        }
+    })
+</script>
+
+</html>
+<script type="module">
+    import { getData } from "./components/getandappend.js";
+    let fundsData = await getData('http://localhost:3000/products');
+    console.log(fundsData)
+    let fundsContainer = document.getElementById('funds');
+    appendFunds(fundsData);
+    function appendFunds(data) {
+        fundsContainer.innerHTML = '';
+        for (let i = 0; i < 4; i++) {
+            let div = document.createElement('div');
+            div.addEventListener("click", () => {
+                let arr = [];
+                arr.push(data[i]);
+                localStorage.setItem('stock', JSON.stringify(arr));
+                window.location.href = 'buyStocks.html';
+                // console.log(arr);
+            })
+
+            let image = document.createElement('img');
+            image.src = data[i].product_image;
+
+            let name = document.createElement('p');
+            name.innerText = data[i].product_name;
+
+            let percentage = document.createElement('p');
+            percentage.innerText = data[i].percentage_interval[2];
+
+            div.append(image, name, percentage);
+            // console.log(div);
+            fundsContainer.append(div);
+        }
+    }
+    let cart = document.getElementById('cart');
+    let stocksTab = document.getElementById('stocks');
+    let mfTab = document.getElementById('mutual');
+    let fTab = document.getElementById('fixed');
+    let usTab = document.getElementById('us');
+    mfTab.addEventListener('click', () => {
+        window.location.href = 'mutualfunds.html';
+    })
+    fTab.addEventListener('click', () => {
+        window.location.href = 'fixeddepo.html';
+    })
+    usTab.addEventListener('click', () => {
+        window.location.href = 'usStocks.html';
+    })
+    stocksTab.addEventListener('click', () => {
+        window.location.href = 'stocks.html';
+    })
+    cart.addEventListener('click', () => {
+        window.location.href = 'addtocart.html';
+    })
+
+    import footer from "./components/footer.js";
+    let parent = document.getElementById('footer');
+    parent.innerHTML = footer();
+</script>
+
+<script>
+    function gotoscreener() {
+        window.location.href = 'screener.html';
+    }
+</script>

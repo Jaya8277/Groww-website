@@ -1,0 +1,136 @@
+body{
+    max-width: 100%;
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+    letter-spacing: 0.2px;
+    font-family: Roboto, system-ui;
+}
+
+#main{
+    /* visibility: hidden; */
+    
+}
+#icici{
+    cursor: pointer;
+}
+
+
+
+.FDdiv{
+    position: absolute;
+    z-index: 1;
+    width:94%;
+    height: 1740px;
+    /* border: 1px solid black; */
+    left: 5%;
+    /* visibility: hidden; */
+
+}
+.IndusBankhd{
+    display: flex;
+    align-items: center;
+    column-gap: 1%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.IndusBankhd>h1{
+    font-size: 21px;
+    color: #44475b;
+}
+.boxes{
+    display: flex;
+    width: 100%;
+    column-gap: 1%;
+}
+.boxes div{
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0%;
+    margin-top: 3%;
+}
+.IndusBank{
+    margin-top: 3%;
+}
+.boxes div h1{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-top: 0px;
+    text-align: center;
+    color: #44475b;
+    margin-bottom: 18px;
+}
+.boxes div p{
+    margin-top: 0;
+    margin: auto;
+    width: 90%;
+    padding: 4%;
+    border-top: rgb(223, 224, 226) 1px solid;
+    /* margin-top: -8%; */
+    text-align: center;
+
+}  
+.shadow{
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.09), 0 0 5px 0px rgba(0, 0, 0, 0.10);
+} 
+
+.AboutFdsDiv{
+    width: 60%;
+    margin-top: 5%;
+}
+.AboutFdsDiv h1{
+    font-size: 21px;
+    color: #44475b;
+}
+.AboutFdsDiv p{
+    font-size: 15px !important;
+    margin-top: 2%;
+
+}
+.BelowAboutFdsDiv{
+    margin-top: 2%;
+    width: 55%;
+    display: grid;
+    column-gap: 10%;
+    row-gap:8%;
+    grid-template-columns: repeat(2,40%);
+}
+.BelowAboutFdsDiv p{
+    font-size: 14px !important;
+}
+#Select_funds div > p{
+    font-family: 'Roboto', sans-serif;
+    margin-right:50px ; 
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #ffffff;
+    line-height: 37px;
+    cursor: pointer;
+    /* color: #00d09c; */
+}
+.frontDiv{
+    height: 400px;
+    width: 400px;
+    position: inherit;
+border-radius: 6px;
+    z-index: 3;
+    left: 65%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+   top: 3%;
+}
+.frontDiv h5{
+    color: #44475b;
+}
+#footer{
+    position: relative;
+    margin-top: 120%;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,110 @@
+body{
+    font-family: Roboto,sans-serif;
+    background: url("https://assets-netstorage.groww.in/web-assets/bill…top/prod/build/client/images/bgLight.037b8aed.svg");
+}
+#div1{
+height: 40px;
+width: 140px;
+cursor: pointer;
+display: flex;
+margin-left: 15%;
+margin-top: 1%;
+color: #44475b
+}
+#div1>img{
+height: 60px;
+width: 60px;
+}
+#div2{
+height: 57px;
+width: 370px;
+font-size: 48px;
+margin-left: 20%;
+margin-top: 8%;
+font-weight: 600;
+color: #44475b;
+}
+#div3{
+margin-left: 26%;
+color: #44475b;
+}
+#div4{
+    height: 190px;
+    width: 530px;
+    padding: 55px 70px; 
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 16px;
+    margin-left: 4%;
+    margin-top: -7%;
+}
+#div4-1{
+    height: 100%;
+}
+#div{
+    display: flex;
+}
+
+#div4-1-1{
+    height: 53px;
+    width: 100%;
+    display: flex;
+    border-bottom: 3px solid #00d09c;
+    background-color: rgb(236, 234, 234);
+    border-top-left-radius: 5px;
+    
+}
+#div4-1-1-1{
+    height: 100%;
+    width: 12%;
+    align-content: center;
+}
+#div4-1-1-1>p{
+    margin-top: 35%;
+    margin-left: 30%;
+    color: #44475b
+}
+#div4-1-1-2{
+    width: 100%;
+    background-color: rgb(236, 234, 234);
+    font-size: 16px;
+    border: 2px solid rgb(236, 234, 234);
+    outline: none;
+}
+#div4-1-2{
+    height: 53px;
+    width: 100%;
+    /* border: 1px solid red; */
+    margin-top: 18%;
+}
+button{
+    border-radius: 5px;
+    height: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    word-spacing: 1cm;
+    height: 100%;
+    width: 100%;
+    background-color: #00d09c;
+    border: 2px solid #00d09c;
+    cursor: pointer;
+}
+#otp-validationText{
+    opacity: 0;
+}
+#login-btn{
+    height: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+#login-otp{
+    border: 1px solid white;
+    margin-left: 180px;
+    font-size: 16px;
+    border-bottom: dotted rgb(5, 5, 5) 2px;
+    outline: none;
+}
+.login-tc{
+text-align: center;
+}
+

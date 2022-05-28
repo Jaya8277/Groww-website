@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groww - Payment</title>
+    <link rel="icon" href="https://groww.in/logo-groww270.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <script src="https://kit.fontawesome.com/157f106a6a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/styles/payment_methods.css">
+
+    <style>
+        button,
+        input {
+            display: block;
+            background-color: transparent;
+            border: 1px solid red;
+            padding: 3px;
+            margin: 5px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .payment-detail {
+            display: none;
+        }
+
+        .open {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="navbar">
+            <div id="logoLinks">
+                <div onclick="gotostocks()" id="logo">
+                    <img src="https://hhooww.com/wp-content/uploads/2019/03/Groww-Mutual-Fund-App-Review.jpg"
+                        alt="logo">
+                </div>
+                <div id="navlinks">
+                    <a href="#">Explore</a>
+                    <a href="#">Investments</a>
+                </div>
+            </div>
+            <div id="searchlinks">
+                <div id="searchbox">
+                    <i class="fa-solid fa-magnifying-glass position"></i> <input id="searchinput" type="text"
+                        placeholder="What are you looking for today?">
+                    <div id="searchDrop">
+                    </div>
+                </div>
+                <div id="profilelinks">
+                    <i class="fa-regular fa-bell leftmargin"></i>
+                    <i class="fa-solid fa-wallet leftmargin"></i>
+                    <i id="cart" class="fa-brands fa-opencart leftmargin"></i>
+                    <div class="leftmargin" id="profile">
+
+                        <img id="cart" src="https://avatars.githubusercontent.com/u/55929607?v=4" alt="">
+                        <div id="dropdown">
+                            <div id="userinfo">
+                                <div id="profile">
+                                    <img src="https://avatars.githubusercontent.com/u/55929607?v=4" alt="">
+                                </div>
+                                <div id="nameid">
+                                    <p>TeamGroww</p>
+                                    <p>TeamGroww098@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-building-columns"></i>
+                                <p>Bank & Autopay</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-folder"></i>
+                                <p>Import Funds</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-tag"></i>
+                                <p>Watchlist</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-note-sticky"></i>
+                                <p>Orders</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>SIPs</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-phone"></i>
+                                <p>Help & Support</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-gear"></i>
+                                <p>Settings</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-moon"></i>
+                                <p>Dark Mode</p>
+                            </div>
+                            <div class="dropinfo">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <p>Log Out</p>
+                            </div>
+                        </div>
+                    </div class="dropinfo">
+                    <i style="font-size: 14px;margin-left: 3px;" id="dd" class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- item -->
+
+
+    <div id="total">Total item :
+        <span id="totalitem">0</span>
+    </div>
+
+
+
+    <div id="all">
+
+        <!-- cart data show -->
+        <div id="cartdata">
+
+
+        </div>
+
+        <div id="container">
+
+
+
+            <div id="right_view_cart">
+                <div class="cards-container">
+                    <div id="cards-container-1">
+                        <p> Amount payable : <span id="total_amount">0</span></p>
+                    </div>
+
+                    <div id="upi" data-type="upi">
+                        <div class="flex align_center">
+                            <div>
+                                <img src='/Images/bhim.svg' alt="" width="40">
+                            </div>
+                            <div>
+                                <p>UPI Payment</p>
+                                <form action="" method="post" enctype="" id="upiData" class="payment-detail">
+                                    <input type="text" name="" id="vpa" class="underline inputBox"
+                                        placeholder="Enter UPI ID"></input>
+                                    <button onclick="gotosuccess()" type="submit" class="turkishButtons">Pay via upi
+                                        id</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="netBanking" data-type="netBanking">
+                        <div class="flex align_center">
+                            <div>
+                                <img src="/Images/net-banking.svg" alt="" width="40">
+                            </div>
+                            <div>
+                                <p>Pay via net banking</p>
+                                <form action="" id="netBankingData" class="payment-detail">
+                                    <input type="text" name="" id="username" class="underline inputBox"
+                                        placeholder="Enter Net Banking">
+                                    <button type="submit" class="turkishButtons">Pay via net banking id</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="creditCard" data-type="creditCard">
+                        <div class="flex align_center" id="last_div">
+                            <div>
+                                <img src="/Images/credit-card.svg" alt="" width="40">
+
+                            </div>
+                            <div>
+                                <p>PAY VIA CREDIT CARD</p>
+                                <form action="" id="creditCardData" class="payment-detail">
+                                    <input type="text" name="" id="creditCardNumber" class="underline inputBox"
+                                        placeholder="Enter Credit Card Number">
+                                    <button type="submit" class="turkishButtons">Pay with creditCard</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="/JS/payment_metods.js"></script>
+    <script type="module">
+        // import header from "/components/header.js";
+        import { getData, appendData } from "/components/getandappend.js";
+        // let parent = document.getElementById('header');
+        // parent.innerHTML = header();
+
+
+
+
+
+        let dropdownboxcaller = document.getElementById('dd');
+        let dropdownbox = document.getElementById('dropdown');
+        var count = 0;
+        dropdownboxcaller.addEventListener('click', function () {
+            count++;
+            if (count % 2 == 1) {
+                dropdownbox.style.display = 'block'
+            }
+            else {
+                dropdownbox.style.display = 'none'
+            }
+        })
+
+        let searchBar = document.getElementById('searchDrop');
+
+        let response = await getData('http://localhost:3000/products');
+        appendData(response, searchBar);
+        let sInput = document.getElementById('searchinput');
+        sInput.addEventListener('click', () => {
+            searchBar.style.display = "block";
+        })
+        sInput.addEventListener('keypress', function () {
+            gD(event);
+        })
+
+        const gD = async (e) => {
+            try {
+                if (e.code === "Enter") {
+                    let input = sInput.value;
+
+                    let res = await fetch(`http://localhost:3000/products?q=${input}`);
+                    let data = await res.json();
+                    console.log(data);
+                    appendData(data, searchBar);
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+
+
+        window.addEventListener('mouseup', (event) => {
+            if (event.target != searchBar) {
+                console.log(event.target);
+                searchBar.style.display = "none";
+            }
+        })
+    </script>
+
+
+
+</body>
+
+</html>

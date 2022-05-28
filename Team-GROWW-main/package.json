@@ -1,0 +1,23 @@
+{
+  "name": "team-groww",
+  "version": "1.0.0",
+  "description": "Investment application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parth-Bisht/Team-GROWW.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Parth-Bisht/Team-GROWW/issues"
+  },
+  "homepage": "https://github.com/Parth-Bisht/Team-GROWW#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
