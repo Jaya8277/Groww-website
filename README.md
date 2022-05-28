@@ -4,19 +4,19 @@
 
 <h1>Groww Clone</h1>
  <h2>Landing Page</h2>
-    <img src="https://github.com/Parth-Bisht/Team-GROWW/raw/main/ScreenShots/HOMEPAGE.png" alt="">
+    <img src="https://miro.medium.com/max/875/1*fW_e2XgBmx7TdyMNHprP9A.png" alt="">
   <h2>Login Page</h2>
-    <img src="ScreenShots/LOGIN_PAGE.png" alt="">
+    <img src="https://miro.medium.com/max/875/1*0aa5tk7IM-GwxGyN4otXpg.png" alt="">
        <h2>Dashboard</h2>
-    <img src="ScreenShots/DASHBOARD.png" alt="">
+    <img src="https://miro.medium.com/max/875/1*rTX0pB2jaRqkHXOTR7x3Bw.png" alt="">
         <h2>Products-Page</h2>
-    <img src="ScreenShots/PRODUCTSPAGE.png" alt="">
+    <img src="https://miro.medium.com/max/875/1*jUdKWQ4rrSH6JVB-Qzd6GQ.png" alt="">
       <h2>Products-Description page</h2>
-    <img src="ScreenShots/DESCRIPTION_PAGE.png" alt="">
+    <img src="https://miro.medium.com/max/875/1*h1_hMuGSCteJZdHYfO4lfw.png" alt="">
        <h2>Cart-Page</h2>
-    <img src="ScreenShots/CART_PAGE.png" alt="">
+    <img src="https://cdn-images-1.medium.com/max/1000/1*b6ayB5iChrMZNq8VP4-z2g.png" alt="">
         <h2>Payment-Page</h2>
-    <img src="ScreenShots/PAYMENT_PAGE.png" alt="">
+    <img src="https://cdn-images-1.medium.com/max/1000/1*AxCD4pcUSVUOHXnW4CHhHw.png" alt="">
     <h1>[Getting Started]</h1>
     <h3>Execution</h3>
     <p>If you want to run our project in your local machine</p>
