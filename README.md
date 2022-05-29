@@ -38,7 +38,7 @@
     </ul>
         <h1>Creators</h1>
     <ul>
-        <li><a href="https://github.com/Parth-Bisht">@Parth Bisht</a></li>
+        <li><a href="https://github.com/Jaya8277">@Jaya Vishwakarma</a></li>
         <li> <a href="https://github.com/Ahmad-ft-215">@Ahmad Noor</a> </li>
         <li><a href="https://github.com/iamdebobrota">@Debobrota Haldar</a></li>
         <li><a href="https://github.com/nitinkadam70">@Nitin Kadam</a></li>
